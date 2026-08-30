@@ -854,6 +854,9 @@ footer{
 
 <body>
 
+    <audio id="weddingMusic" loop preload="auto">
+    <source src="https://raw.githubusercontent.com/mehtabhossain890-cell/invitationcard/main/wedding-song.mp3" type="audio/mpeg">
+</audio>
 
 <!-- =========================
      OPEN INVITATION
@@ -1362,6 +1365,14 @@ function openInvitation(){
     document
         .getElementById("openScreen")
         .classList.add("hide");
+
+    const music = document.getElementById("weddingMusic");
+
+    music.volume = 0.5;
+
+    music.play().catch(function(error){
+        console.log("Music could not start:", error);
+    });
 
 }
 
