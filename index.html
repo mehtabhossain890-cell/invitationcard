@@ -813,31 +813,95 @@ footer{
         font-size:21px;
     }
 
+    /* =========================
+       MOBILE COUPLE
+    ========================= */
+
     .couple-grid{
+        display:grid;
         grid-template-columns:1fr;
+        grid-template-rows:auto auto auto;
+        gap:20px;
+        width:100%;
+        justify-items:center;
     }
 
+    /* GROOM */
+    .couple-grid .person:first-child{
+        grid-row:1;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    /* HEART */
     .couple-heart{
-        order:2;
+        grid-row:2;
+
+        width:100%;
+        height:70px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        margin:0;
+        padding:0;
+
+        font-size:55px;
+
+        text-align:center;
+
+        animation:heartbeat 1.5s infinite;
+    }
+
+    /* BRIDE */
+    .couple-grid .person:last-child{
+        grid-row:3;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
     }
 
     .photo{
         width:180px;
-
         height:180px;
+        margin:0 auto;
     }
 
     .person h3{
         font-size:48px;
+        text-align:center;
+        margin-top:20px;
     }
+
+    .person p{
+        text-align:center;
+    }
+
+    /* =========================
+       DATE
+    ========================= */
 
     .big-date{
         font-size:75px;
     }
 
+    /* =========================
+       EVENTS
+    ========================= */
+
     .event-grid{
         grid-template-columns:1fr;
     }
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
 
     .count{
         width:105px;
